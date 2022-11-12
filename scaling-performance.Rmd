@@ -204,7 +204,8 @@ When looking at this plot:
 
 -   Otherwise, and most typically, the slowness will be in "Calculate", which indicates that some computation in your reactive is slow, and you'll need to use the techniques in the rest of the chapter to find and fix the bottlenecks.
 
-## Profiling
+## 
+ling
 
 If your app is spending a lot of time calculating, you next need to figure out which calculation is slow, i.e. you need to **profile** your code to find the bottleneck.
 We're going to do profiling with the [profvis](https://rstudio.github.io/profvis) package, which provides an interactive visualisation of the profiling data collected by `utils::Rprof()`.
@@ -215,7 +216,7 @@ I'll start by introducing the flame graph, the visualisation used for profiling,
 Across programming languages, the most common tool used to visualise profiling data is the **flame graph**.
 To help you understand it, I'm going to start by revisiting the basics of code execution, then build up progressively to the final visualisation.
 
-To make the process concrete, we'll work with following code where I use `profivs::pause()` (more on that shortly) to indicate work being done:
+To make the process concrete, we'll work with following code where I use `profvis::pause()` (more on that shortly) to indicate work being done:
 
 ```{r}
 library(profvis)
